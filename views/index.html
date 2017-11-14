@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div id="main-container"></div>
+    <script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script id="entry-template" type="text/x-handlebars-template">
+      <div>{{json this}}</div>
+    </script>
+    <script>
+      var source   = $("#entry-template").html();
+      var template = Handlebars.compile(source);
+      var result = 111111111
+      var html = template({ result })
+      $("#entry-template").empty()
+      $("#main-container").html(html)
+    </script>
+  </body>
+</html>
